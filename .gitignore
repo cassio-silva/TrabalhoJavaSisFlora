@@ -1,4 +1,22 @@
+<<<<<<< 55f8247b0fdee5051438fb744b2ccae28367cba7
 /SisFlora.Comum.AcessoDados.JDBC/dist/
 /SisFlora.Comum.JDBC.Factory/dist/
 /SisFlora.Comum.JDBC.Interfaces/dist/
 /SisFlora.Repositorio.Comum/dist/
+=======
+/SisFlora.Comum.AcessoDados.JDBC/nbproject/private/
+/SisFlora.Comum.DAO.Interfaces/build/
+/SisFlora.Comum.DAO.Interfaces/dist/
+/SisFlora.Comum.DAO.Interfaces/nbproject/private/
+/SisFlora.Comum.JDBC.Factory/nbproject/private/
+/SisFlora.Comum.JDBC.Factory/build/
+/SisFlora.Comum.AcessoDados.JDBC/build/
+/SisFlora.Comum.AcessoDados.JDBC/dist/
+/SisFlora.Comum.JDBC.Interfaces/build/
+/SisFlora.Comum.JDBC.Interfaces/dist/
+/SisFlora.Comum.JDBC.Factory/dist/
+/SisFlora.Repositorio.Comum/build/
+/SisFlora.Repositorio.Comum/dist/
+/SisFlora.Views/build/
+/SisFlora.Views/dist/
+>>>>>>> Commit para o victor
