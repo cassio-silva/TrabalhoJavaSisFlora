@@ -6,7 +6,8 @@
 package principalPackage;
 
 import javax.swing.JFrame;
-import partialViewsPackage.FrmCadClientes;
+import partialViewsPackage.FrmClientes;
+import partialViewsPackage.FrmProdutos;
 
 /**
  *
@@ -34,13 +35,15 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenuFormularios = new javax.swing.JMenu();
         jMenuClientes = new javax.swing.JMenuItem();
         jMenuProdutos = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuSair = new javax.swing.JMenuItem();
         jMenuAjuda = new javax.swing.JMenu();
         jMenuSubSobre = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SisFlora");
 
-        jMenuFormularios.setText("Formulários");
+        jMenuFormularios.setText("Cadastros");
 
         jMenuClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
         jMenuClientes.setText("Clientes");
@@ -53,7 +56,22 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jMenuProdutos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK));
         jMenuProdutos.setText("Produtos");
+        jMenuProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuProdutosActionPerformed(evt);
+            }
+        });
         jMenuFormularios.add(jMenuProdutos);
+        jMenuFormularios.add(jSeparator1);
+
+        jMenuSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
+        jMenuSair.setText("Sair");
+        jMenuSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuSairActionPerformed(evt);
+            }
+        });
+        jMenuFormularios.add(jMenuSair);
 
         jMenuBar1.add(jMenuFormularios);
 
@@ -86,6 +104,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
         FrmClientes form = new FrmClientes();
         form.setVisible(true);
     }//GEN-LAST:event_jMenuClientesActionPerformed
+
+    private void jMenuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSairActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jMenuSairActionPerformed
+
+    private void jMenuProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuProdutosActionPerformed
+        // TODO add your handling code here:
+        FrmProdutos form = new FrmProdutos();
+        form.setVisible(true);
+    }//GEN-LAST:event_jMenuProdutosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,6 +160,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuClientes;
     private javax.swing.JMenu jMenuFormularios;
     private javax.swing.JMenuItem jMenuProdutos;
+    private javax.swing.JMenuItem jMenuSair;
     private javax.swing.JMenuItem jMenuSubSobre;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
