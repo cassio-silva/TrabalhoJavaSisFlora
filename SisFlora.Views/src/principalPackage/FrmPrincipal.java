@@ -6,8 +6,7 @@
 package principalPackage;
 
 import javax.swing.JFrame;
-import partialViewsPackage.FrmClientes;
-import partialViewsPackage.FrmProdutos;
+import partialViewsPackage.*;
 
 /**
  *
@@ -31,6 +30,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFormularios = new javax.swing.JMenu();
         jMenuClientes = new javax.swing.JMenuItem();
@@ -42,6 +42,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SisFlora");
+        setResizable(false);
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        jLabel1.setText("SisFlora");
 
         jMenuFormularios.setText("Cadastros");
 
@@ -79,6 +83,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jMenuSubSobre.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK));
         jMenuSubSobre.setText("Sobre...");
+        jMenuSubSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuSubSobreActionPerformed(evt);
+            }
+        });
         jMenuAjuda.add(jMenuSubSobre);
 
         jMenuBar1.add(jMenuAjuda);
@@ -89,11 +98,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 518, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(136, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(129, 129, 129))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 328, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel1)
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         pack();
@@ -115,6 +130,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
         FrmProdutos form = new FrmProdutos();
         form.setVisible(true);
     }//GEN-LAST:event_jMenuProdutosActionPerformed
+
+    private void jMenuSubSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSubSobreActionPerformed
+        // TODO add your handling code here:
+        FrmSobre form = new FrmSobre();
+        form.setVisible(true);
+    }//GEN-LAST:event_jMenuSubSobreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,6 +176,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuClientes;
