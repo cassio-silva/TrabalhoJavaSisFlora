@@ -16,6 +16,5 @@ public interface IDAO<Modelo, Chave> {
     Modelo SelecionarPorId();
     void Inserir();
     void Atualizar();
-    void Excluir();
     void ExcluirPorId();
 }
