@@ -12,9 +12,9 @@ import java.util.List;
  * @author Cassio
  */
 public interface IDAO<Modelo, Chave> {
-    List<Modelo> Selecionar();
-    Modelo SelecionarPorId();
-    void Inserir();
-    void Atualizar();
-    void ExcluirPorId();
+    List<Modelo> selecionar();
+    Modelo selecionarPorId();
+    void inserir();
+    void atualizar();
+    void excluirPorId();
 }

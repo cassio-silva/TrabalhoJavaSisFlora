@@ -20,6 +20,7 @@ public class Cliente {
     private String Bairro;
     private String Cidade;
     private DateFormat DataNasc;
+    private String Senha;
 
     public int getId() {
         return Id;
@@ -126,5 +127,4 @@ public class Cliente {
     }
     public enum Uf{SP, RJ, MG, SC, GO, DF};
     public enum Sexo{masculino,feminino};
-    private String Senha;
 }
