@@ -7,7 +7,11 @@ package ClassesDAO;
 
 import Dominio.Cliente;
 import InterfaceDAO.IDAO;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
+import javax.swing.JOptionPane;
+import postgreSql.PostgreSqlFactory;
 
 public class ClienteDAO implements IDAO<Cliente, Integer>
 {
@@ -22,8 +26,20 @@ public class ClienteDAO implements IDAO<Cliente, Integer>
     }
 
     @Override
-    public void inserir(Cliente entidade) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void inserir(Cliente cliente) {
+        try{            
+            Connection conexao = PostgreSqlFactory.createConnection();
+            String sql = "INSERT INTO Contato (Nome, Telefone, Email, Rg, Cpf, Senha, Logradouro, Complemento, Bairro, Cidade, Estado, Cep, DataNascimento, Sexto) VALUES ("+cliente.getNome()+","+ cliente.getTelefone()+","+cliente.getEmail()+
+                                                                       ","+cliente.getRG()+","+cliente.getCPF()+","+cliente.getSenha()+","+cliente.getLogradouro()+","+cliente.getComplemento()+","+cliente.getBairro()+","+cliente.getCidade()+","+cliente.getCEP()+
+                                                                       ","+cliente.getDataNasc()+", 1";
+            PreparedStatement stmt = PostgreSqlFactory.criarComandoSql(conexao, sql);
+            PostgreSqlFactory.executarComandoSql(conexao, stmt, sql);
+            conexao.close();
+            
+        }catch(Exception exc)
+        {
+            JOptionPane.showMessageDialog(null, exc);
+        }
     }
 
     @Override
@@ -35,5 +51,5 @@ public class ClienteDAO implements IDAO<Cliente, Integer>
     public void excluirPorId(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

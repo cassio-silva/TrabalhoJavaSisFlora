@@ -14,6 +14,7 @@ public class PostgreSqlFactory {
         String senha = "SIh9u9UQ7UhflVZWIH2UUjBaRs";
         Class.forName("org.postgresql.Driver");
         Connection conexao = DriverManager.getConnection(url, usuario, senha);
+        
         return conexao;
     }
 
@@ -45,5 +46,9 @@ public class PostgreSqlFactory {
 
     public static void fecharConexao(Connection conexao) throws SQLException {
         conexao.close();
+    }
+
+    public static PreparedStatement CriarComandoSql(Connection conexao, String sql) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
