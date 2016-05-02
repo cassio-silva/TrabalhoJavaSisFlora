@@ -5,34 +5,35 @@
  */
 package ClassesDAO;
 
+import Dominio.Cliente;
 import InterfaceDAO.IDAO;
 import java.util.List;
 
-public class ClienteDAO implements IDAO {
-
+public class ClienteDAO implements IDAO<Cliente, Integer>
+{
     @Override
-    public List selecionar() {
+    public List<Cliente> selecionar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Object selecionarPorId() {
+    public Cliente selecionarPorId(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void inserir() {
+    public void inserir(Cliente entidade) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void atualizar() {
+    public void atualizar(Cliente entidade) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void excluirPorId() {
+    public void excluirPorId(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
 }

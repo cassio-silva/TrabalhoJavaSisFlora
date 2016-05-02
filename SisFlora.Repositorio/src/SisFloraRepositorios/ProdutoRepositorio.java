@@ -5,8 +5,8 @@
  */
 package SisFloraRepositorios;
 
-import ClassesDAO.ClienteDAO;
-import Dominio.Cliente;
+import ClassesDAO.ProdutoDAO;
+import Dominio.Produto;
 import InterfaceDAO.IDAO;
 import SisFloraComumRepositorioInterfaces.IRepositorioGenerico;
 import java.util.List;
@@ -15,33 +15,33 @@ import java.util.List;
  *
  * @author Cassio
  */
-public class ProdutoRepositorio implements IRepositorioGenerico<Cliente, Integer>{
+public class ProdutoRepositorio implements IRepositorioGenerico<Produto, Integer>{
     
-    private IDAO<Cliente, Integer> _clienteDAO = new ClienteDAO();
+    private IDAO<Produto, Integer> _ProdutoDAO = new ProdutoDAO();
     
     @Override
-    public List<Cliente> selecionar() {
-        return _clienteDAO.selecionar();
+    public List<Produto> selecionar() {
+        return _ProdutoDAO.selecionar();
     }
 
     @Override
-    public Cliente selecionarPorId(Integer id) {
-        return _clienteDAO.selecionarPorId();
+    public Produto selecionarPorId(Integer id) {
+        return _ProdutoDAO.selecionarPorId(id);
     }
 
     @Override
-    public void inserir(Cliente modelo) {
-        _clienteDAO.inserir();
+    public void inserir(Produto modelo) {
+        _ProdutoDAO.inserir(modelo);
     }
 
     @Override
-    public void atualizar(Cliente modelo) {
-        _clienteDAO.atualizar();
+    public void atualizar(Produto modelo) {
+        _ProdutoDAO.atualizar(modelo);
     }
 
     @Override
     public void excluirPorId(Integer id) {
-        _clienteDAO.excluirPorId();
+        _ProdutoDAO.excluirPorId(id);
     }
     
 }

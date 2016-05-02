@@ -21,21 +21,21 @@ public class ClienteRepositorio implements IRepositorioGenerico<Cliente, Integer
 
     @Override
     public Cliente selecionarPorId(Integer id) {
-        return _clienteDAO.selecionarPorId();
+        return _clienteDAO.selecionarPorId(id);
     }
 
     @Override
     public void inserir(Cliente modelo) {
-        _clienteDAO.inserir();
+        _clienteDAO.inserir(modelo);
     }
 
     @Override
     public void atualizar(Cliente modelo) {
-        _clienteDAO.atualizar();
+        _clienteDAO.atualizar(modelo);
     }
 
     @Override
     public void excluirPorId(Integer id) {
-        _clienteDAO.excluirPorId();
+        _clienteDAO.excluirPorId(id);
     }
 }

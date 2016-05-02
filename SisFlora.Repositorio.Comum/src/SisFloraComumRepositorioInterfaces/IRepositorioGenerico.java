@@ -8,8 +8,8 @@ package SisFloraComumRepositorioInterfaces;
 import java.util.List;
 
 /**
- * @param <Modelo> Recebe um objeto
- * @param <Chave> Recebe a Chave primaria do Objeto
+ * @param <Modelo> Recebe uma entidade Object
+ * @param <Chave> Recebe a Chave primaria da entidade
  * @author Cassio
  */
 public interface IRepositorioGenerico<Modelo extends Object, Chave> {
